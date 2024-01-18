@@ -3,3 +3,19 @@ import pandas as pd
 df = df = pd.read_excel(r"E:\datasets\world_population_excel_workbook.xlsx")
 df.set_index('Country')
 print(df.set_index)
+
+// TO SORT
+import pandas as pd
+df = pd.read_excel(r"E:\datasets\world_population_excel_workbook.xlsx", sheet_name = 'Sheet1')
+print(df[df['Rank']<= 10].sort_values(by='Rank'))
+
+# //// to find the mean 
+
+import pandas as pd
+df = pd.read_csv(r"E:\datasets\Flavors.csv")
+#print(df.dtypes)
+data_group = df.groupby('Base Flavor')
+print(data_group.mean(float))
+# OR 
+# mean_value= data_group.mean(float)
+# print(mean_value)
