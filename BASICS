@@ -1,0 +1,5 @@
+// TO CHANGE THE INDEX 
+import pandas as pd
+df = df = pd.read_excel(r"E:\datasets\world_population_excel_workbook.xlsx")
+df.set_index('Country')
+print(df.set_index)
